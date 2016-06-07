@@ -529,6 +529,9 @@ public class MainActivity extends AppCompatActivity {
 
             updateUserActivity(minutesReport);
         }
+    }
 
+    public void smilyClicked(View v) {
+        Log.i("MainActivity", "smilyClicked");
     }
 }

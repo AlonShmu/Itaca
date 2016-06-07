@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mobile.itaca.itaca.MainActivity">
+    tools:context="com.mobile.itaca.itaca.MainActivity"
+    android:longClickable="false">
 
     <LinearLayout
         android:orientation="vertical"
@@ -24,15 +25,33 @@
             android:layout_gravity="center"
             android:src="@drawable/itaca_logo_touching_lives" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/minuteseditText"
-            android:layout_gravity="center"
-            android:hint="Activity Time in Minutes"
-            android:layout_marginTop="5dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="260dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/minuteseditText"
+                android:hint="Activity Time in Minutes"
+                android:layout_marginTop="5dp" />
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/imageButton"
+                android:layout_gravity="center"
+                android:src="@drawable/on"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:background="#fff3f3f3"
+                android:clickable="true"
+                android:onClick="smilyClicked" />
+        </LinearLayout>
 
         <Button
             android:layout_width="wrap_content"
