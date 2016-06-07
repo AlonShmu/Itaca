@@ -2,74 +2,88 @@
 <items version="2" >
 
     <item
-        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="673d77a5bbddd766037f088e775df525c46407f0">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/com.android.support-support-vector-drawable-23.2.1_efc295a046fa579c50f5d4d9d72c3e28895f0e74.jar" />
-    </item>
-    <item
-        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/com.android.support-animated-vector-drawable-23.2.1_d91c68232827ef1f829cf489992b4d06d1c0960a.jar" />
-    </item>
-    <item
         jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-appindexing-8.1.0_cf3d7bd95535c708af4f20a29816822abdca7e85.jar" />
-    </item>
-    <item
-        jar="/Users/alonshmueli/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v2.2.4/7abd1ecef320da6a7679b137083151401fe8bf43/MPAndroidChart-v2.2.4.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="7abd1ecef320da6a7679b137083151401fe8bf43">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/MPAndroidChart-v2.2.4_4973208d421202bae3515ea7ae40409f19e0102d.jar" />
-    </item>
-    <item
-        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/gson-2.2.4_d0ce76b63ce905fbab3c5d385c8e1b8692010f19.jar" />
-    </item>
-    <item
-        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-23.2.1_d9e77501704ca104b21bb9314921bd38794d614b.jar" />
-    </item>
-    <item
-        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/internal_impl-23.2.1_ad92f07b42b95b68f145d8f24cfc825e66f8bd1a.jar" />
-    </item>
-    <item
-        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-basement-8.1.0_b0da220718a517d36532fc7f6494d6bb2d797647.jar" />
-    </item>
-    <item
-        jar="/Users/alonshmueli/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/support-annotations-23.2.1_c06318d6d3d448372e0cb72cf97cf7ce8577c939.jar" />
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-8.1.0_cf3d7bd95535c708af4f20a29816822abdca7e85/classes.dex" />
     </item>
     <item
         jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
-        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/pre-dexed/release/com.android.support-appcompat-v7-23.2.1_f9800ff1e49412f38461f8ed7d559d922e4ee88b.jar" />
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.2.1_f9800ff1e49412f38461f8ed7d559d922e4ee88b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alonshmueli/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v2.2.4/7abd1ecef320da6a7679b137083151401fe8bf43/MPAndroidChart-v2.2.4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="7abd1ecef320da6a7679b137083151401fe8bf43">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/MPAndroidChart-v2.2.4_4973208d421202bae3515ea7ae40409f19e0102d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-8.1.0_b0da220718a517d36532fc7f6494d6bb2d797647/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_efc295a046fa579c50f5d4d9d72c3e28895f0e74/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="477b6076bdf283acb254280158c107d235757384">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_73ceba6b88b7ca2c870acd7fa947ad4ba7dc7fbb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_d91c68232827ef1f829cf489992b4d06d1c0960a/classes.dex" />
+    </item>
+    <item
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.2.4_d0ce76b63ce905fbab3c5d385c8e1b8692010f19/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="dbfc66f45a724458dfb50f08ab8ff1021f3e7863">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_342f4733e2317d0c77da0fd8ad62b34a679c6119/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_d9e77501704ca104b21bb9314921bd38794d614b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_ad92f07b42b95b68f145d8f24cfc825e66f8bd1a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alonshmueli/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/alonshmueli/Documents/Itaca/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_c06318d6d3d448372e0cb72cf97cf7ce8577c939/classes.dex" />
     </item>
 
 </items>
