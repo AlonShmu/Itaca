@@ -300,6 +300,18 @@ public class MainActivity extends AppCompatActivity {
                     commits.add(teamActivityByWeekData.getWeekData4().getUserCommit());
                 }
 
+                if (teamActivityByWeekData.getWeekData5() != null) {
+                    teamsNames.add(teamActivityByWeekData.getWeekData5().getTeamname());
+                    teamsData.add(teamActivityByWeekData.getWeekData5().getSum());
+                    commits.add(teamActivityByWeekData.getWeekData5().getUserCommit());
+                }
+
+                if (teamActivityByWeekData.getWeekData6() != null) {
+                    teamsNames.add(teamActivityByWeekData.getWeekData6().getTeamname());
+                    teamsData.add(teamActivityByWeekData.getWeekData6().getSum());
+                    commits.add(teamActivityByWeekData.getWeekData6().getUserCommit());
+                }
+
                 createBarChart(teamsNames, teamsData, commits);
                 MainActivity.this.runOnUiThread(new Runnable() {
                     @Override
@@ -452,7 +464,7 @@ public class MainActivity extends AppCompatActivity {
         barChart.getXAxis().setGridColor(0);
         barChart.getAxisLeft().setEnabled(false);
         barChart.getAxisRight().setEnabled(false);
-        barChart.getXAxis().setTextSize(12);
+        barChart.getXAxis().setTextSize(11);
         barChart.getXAxis().setAxisLineColor(0);
 
         // check if the length is more then 6 chars
@@ -462,6 +474,10 @@ public class MainActivity extends AppCompatActivity {
 //                break;
 //            }
 //        }
+
+        if (barDataPoints.size() > 5) {
+            barChart.getXAxis().setTextSize(8);
+        }
 
         if (barDataPoints.size() > 1) {
             barChart.getXAxis().setLabelRotationAngle(270.0f);

@@ -53,6 +53,12 @@ public class TeamActivityByWeekData {
     @SerializedName("4")
     private TeamActivityWeekData weekData4;
 
+    @SerializedName("5")
+    private TeamActivityWeekData weekData5;
+
+    @SerializedName("6")
+    private TeamActivityWeekData weekData6;
+
     public String getSucess() {
         return sucess;
     }
@@ -93,5 +99,19 @@ public class TeamActivityByWeekData {
     }
     public void setWeekData4(TeamActivityWeekData weekData4) {
         this.weekData4 = weekData4;
+    }
+
+    public TeamActivityWeekData getWeekData5() {
+        return weekData5;
+    }
+    public void setWeekData5(TeamActivityWeekData weekData5) {
+        this.weekData5 = weekData5;
+    }
+
+    public TeamActivityWeekData getWeekData6() {
+        return weekData6;
+    }
+    public void setWeekData6(TeamActivityWeekData weekData6) {
+        this.weekData6 = weekData6;
     }
 }
