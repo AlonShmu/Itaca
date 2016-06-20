@@ -16,6 +16,7 @@ import android.view.View.OnKeyListener;
 import android.view.KeyEvent;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ImageView;
 import android.graphics.Color;
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (((ImageButton)findViewById(R.id.imageButton)) != null) {
+            ((ImageButton) findViewById(R.id.imageButton)).setVisibility(View.INVISIBLE);
+        }
 
         ((EditText)findViewById(R.id.minuteseditText)).setOnKeyListener(new OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event)
