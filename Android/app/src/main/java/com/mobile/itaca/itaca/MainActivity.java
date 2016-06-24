@@ -40,6 +40,8 @@ import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.highlight.Highlight;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 import com.google.gson.Gson;
 
@@ -461,7 +463,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void createBarChart(ArrayList<String> barDataPoints, ArrayList<Float> barValues, ArrayList<Float> commits) {
-        BarChart barChart = (BarChart) findViewById(R.id.barchart);
+        final BarChart barChart = (BarChart) findViewById(R.id.barchart);
 
         barChart.setDescription("");
         barChart.getLegend().setEnabled(false);
@@ -472,13 +474,18 @@ public class MainActivity extends AppCompatActivity {
         barChart.getXAxis().setTextSize(11);
         barChart.getXAxis().setAxisLineColor(0);
 
-        // check if the length is more then 6 chars
-//        for (int i = 0; i < barDataPoints.size(); i++) {
-//            if ((barDataPoints.get(i).length() > 6) && (barDataPoints.size() > 3)) {
-//                barChart.getXAxis().setLabelRotationAngle(270.0f);
-//                break;
-//            }
-//        }
+        barChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+            @Override
+            public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
+                Log.i("MainActivity", "OnChartValueSelectedListener");
+                String name = barChart.getData().getXVals().get(e.getXIndex());
+                Intent intent = new Intent(MainActivity.this, TeamActivity.class);
+                intent.putExtra("teamName",name);
+                startActivity(intent);
+            }
+            @Override
+            public void onNothingSelected() { }
+        });
 
         if (barDataPoints.size() > 5) {
             barChart.getXAxis().setTextSize(8);
