@@ -2,6 +2,8 @@ package com.mobile.itaca.itaca;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+
 /**
  * Created by alonshmueli on 04/05/2016.
  */
@@ -37,6 +39,8 @@ class UserForTeamData {
 
 public class TeamUsersData {
     private String sucess;
+    private ArrayList<UserForTeamData> usersData = new ArrayList<>();;
+
     // parse dictionary: {"sucess":"true","0":{"id":"1","username":"ronshra","TeamName":"rrrrrr","UserCommit":"240","sum(minutes)":"197","sum(minutes)\/L.`UserCommit`":"0.8208"}}
     @SerializedName("0")
     private UserForTeamData userData0;
@@ -62,6 +66,63 @@ public class TeamUsersData {
     @SerializedName("7")
     private UserForTeamData userData7;
 
+    @SerializedName("8")
+    private UserForTeamData userData8;
+
+    @SerializedName("9")
+    private UserForTeamData userData9;
+
+    @SerializedName("10")
+    private UserForTeamData userData10;
+
+    @SerializedName("11")
+    private UserForTeamData userData11;
+
+    @SerializedName("12")
+    private UserForTeamData userData12;
+
+    public void genetaeUsesData() {
+        if (userData0 != null) {
+            usersData.add(userData0);
+        }
+        if (userData1 != null) {
+            usersData.add(userData1);
+        }
+        if (userData2 != null) {
+            usersData.add(userData2);
+        }
+        if (userData3 != null) {
+            usersData.add(userData3);
+        }
+        if (userData4 != null) {
+            usersData.add(userData4);
+        }
+        if (userData5 != null) {
+            usersData.add(userData5);
+        }
+        if (userData6 != null) {
+            usersData.add(userData6);
+        }
+        if (userData7 != null) {
+            usersData.add(userData7);
+        }
+        if (userData8 != null) {
+            usersData.add(userData8);
+        }
+        if (userData9 != null) {
+            usersData.add(userData9);
+        }
+        if (userData10 != null) {
+            usersData.add(userData10);
+        }
+        if (userData11 != null) {
+            usersData.add(userData11);
+        }
+        if (userData12 != null) {
+            usersData.add(userData12);
+        }
+    }
+
     public String getSucess() {
         return sucess;
     }
@@ -69,59 +130,7 @@ public class TeamUsersData {
         this.sucess = sucess;
     }
 
-    public UserForTeamData getUserData0() {
-        return userData0;
-    }
-    public void setUserData0(UserForTeamData userData0) {
-        this.userData0 = userData0;
-    }
-
-    public UserForTeamData getUserData1() {
-        return userData1;
-    }
-    public void setUserData1(UserForTeamData userData1) {
-        this.userData1 = userData1;
-    }
-
-    public UserForTeamData getUserData2() {
-        return userData2;
-    }
-    public void setUserData2(UserForTeamData userData2) {
-        this.userData2 = userData2;
-    }
-
-    public UserForTeamData getUserData3() {
-        return userData3;
-    }
-    public void setUserData3(UserForTeamData userData3) {
-        this.userData3 = userData3;
-    }
-
-    public UserForTeamData getUserData4() {
-        return userData4;
-    }
-    public void setUserData4(UserForTeamData userData4) {
-        this.userData4 = userData4;
-    }
-
-    public UserForTeamData getUserData5() {
-        return userData5;
-    }
-    public void setUserData5(UserForTeamData userData5) {
-        this.userData5 = userData5;
-    }
-
-    public UserForTeamData getUserData6() {
-        return userData6;
-    }
-    public void setUserData6(UserForTeamData userData6) {
-        this.userData6 = userData6;
-    }
-
-    public UserForTeamData getUserData7() {
-        return userData7;
-    }
-    public void setUserData7(UserForTeamData userData7) {
-        this.userData7 = userData7;
+    public ArrayList<UserForTeamData> getUsersData() {
+        return usersData;
     }
 }

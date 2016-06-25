@@ -89,91 +89,17 @@ public class TeamActivity extends AppCompatActivity {
                 ArrayList<Float> teamsData = new ArrayList<>();
                 ArrayList<Float> commits = new ArrayList<>();
 
-                int index = -1;
-                index = teamUsersData.getUserData0().getUsername().lastIndexOf("@");
-                if (index > -1) {
-                    teamsNames.add(teamUsersData.getUserData0().getUsername().substring(0, index));
-                } else {
-                    teamsNames.add(teamUsersData.getUserData0().getUsername());
-                }
-                teamsData.add(teamUsersData.getUserData0().getSum());
-                commits.add(teamUsersData.getUserData0().getUserCommit());
-
-                if (teamUsersData.getUserData1() != null) {
-                    index = teamUsersData.getUserData1().getUsername().lastIndexOf("@");
+                teamUsersData.genetaeUsesData();
+                for (int i = 0; i < teamUsersData.getUsersData().size(); i++) {
+                    UserForTeamData userData = teamUsersData.getUsersData().get(i);
+                    int index = userData.getUsername().lastIndexOf("@");
                     if (index > -1) {
-                        teamsNames.add(teamUsersData.getUserData1().getUsername().substring(0, index));
+                        teamsNames.add(userData.getUsername().substring(0, index));
                     } else {
-                        teamsNames.add(teamUsersData.getUserData1().getUsername());
+                        teamsNames.add(userData.getUsername());
                     }
-                    teamsData.add(teamUsersData.getUserData1().getSum());
-                    commits.add(teamUsersData.getUserData1().getUserCommit());
-                }
-
-                if (teamUsersData.getUserData2() != null) {
-                    index = teamUsersData.getUserData2().getUsername().lastIndexOf("@");
-                    if (index > -1) {
-                        teamsNames.add(teamUsersData.getUserData2().getUsername().substring(0, index));
-                    } else {
-                        teamsNames.add(teamUsersData.getUserData2().getUsername());
-                    }
-                    teamsData.add(teamUsersData.getUserData2().getSum());
-                    commits.add(teamUsersData.getUserData2().getUserCommit());
-                }
-
-                if (teamUsersData.getUserData3() != null) {
-                    index = teamUsersData.getUserData3().getUsername().lastIndexOf("@");
-                    if (index > -1) {
-                        teamsNames.add(teamUsersData.getUserData3().getUsername().substring(0, index));
-                    } else {
-                        teamsNames.add(teamUsersData.getUserData3().getUsername());
-                    }
-                    teamsData.add(teamUsersData.getUserData3().getSum());
-                    commits.add(teamUsersData.getUserData3().getUserCommit());
-                }
-
-                if (teamUsersData.getUserData4() != null) {
-                    index = teamUsersData.getUserData4().getUsername().lastIndexOf("@");
-                    if (index > -1) {
-                        teamsNames.add(teamUsersData.getUserData4().getUsername().substring(0, index));
-                    } else {
-                        teamsNames.add(teamUsersData.getUserData4().getUsername());
-                    }
-                    teamsData.add(teamUsersData.getUserData4().getSum());
-                    commits.add(teamUsersData.getUserData4().getUserCommit());
-                }
-
-                if (teamUsersData.getUserData5() != null) {
-                    index = teamUsersData.getUserData5().getUsername().lastIndexOf("@");
-                    if (index > -1) {
-                        teamsNames.add(teamUsersData.getUserData5().getUsername().substring(0, index));
-                    } else {
-                        teamsNames.add(teamUsersData.getUserData5().getUsername());
-                    }
-                    teamsData.add(teamUsersData.getUserData5().getSum());
-                    commits.add(teamUsersData.getUserData5().getUserCommit());
-                }
-
-                if (teamUsersData.getUserData6() != null) {
-                    index = teamUsersData.getUserData6().getUsername().lastIndexOf("@");
-                    if (index > -1) {
-                        teamsNames.add(teamUsersData.getUserData6().getUsername().substring(0, index));
-                    } else {
-                        teamsNames.add(teamUsersData.getUserData6().getUsername());
-                    }
-                    teamsData.add(teamUsersData.getUserData6().getSum());
-                    commits.add(teamUsersData.getUserData6().getUserCommit());
-                }
-
-                if (teamUsersData.getUserData7() != null) {
-                    index = teamUsersData.getUserData7().getUsername().lastIndexOf("@");
-                    if (index > -1) {
-                        teamsNames.add(teamUsersData.getUserData7().getUsername().substring(0, index));
-                    } else {
-                        teamsNames.add(teamUsersData.getUserData7().getUsername());
-                    }
-                    teamsData.add(teamUsersData.getUserData7().getSum());
-                    commits.add(teamUsersData.getUserData7().getUserCommit());
+                    teamsData.add(userData.getSum());
+                    commits.add(userData.getUserCommit());
                 }
 
                 createBarChart(teamsNames, teamsData, commits);
