@@ -16,6 +16,7 @@ import android.view.View.OnKeyListener;
 import android.view.KeyEvent;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ImageView;
@@ -54,10 +55,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        if (((ImageButton)findViewById(R.id.imageButton)) != null) {
-            ((ImageButton) findViewById(R.id.imageButton)).setVisibility(View.INVISIBLE);
-        }
 
         ((EditText)findViewById(R.id.minuteseditText)).setOnKeyListener(new OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event)
@@ -105,6 +102,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        Calendar calendar = Calendar.getInstance();
+        Integer day = calendar.get(Calendar.DAY_OF_MONTH);
+        Integer oneDayReport = preferences.getInt("onedayreport", 0);
+        if ((((ImageButton)findViewById(R.id.imageButton)) != null) && (day == oneDayReport)) {
+            ((ImageButton) findViewById(R.id.imageButton)).setVisibility(View.INVISIBLE);
+        }
+
         onFetchData();
     }
 
@@ -127,6 +131,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+
+        Calendar calendar = Calendar.getInstance();
+        Integer day = calendar.get(Calendar.DAY_OF_MONTH);
+        Integer oneDayReport = preferences.getInt("onedayreport", 0);
+        if ((((ImageButton)findViewById(R.id.imageButton)) != null) && (day != oneDayReport)) {
+            ((ImageButton) findViewById(R.id.imageButton)).setVisibility(View.VISIBLE);
+        }
+
         onFetchData();
     }
 
@@ -272,6 +284,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         protected void onPostExecute(String data) {
+            ((Button) findViewById(R.id.updatebutton)).setClickable(true);
             Log.i("MainActivity", "TeamActivityByWeek-onPostExecute");
             TeamActivityByWeekData teamActivityByWeekData = new Gson().fromJson(data, TeamActivityByWeekData.class);
             if (teamActivityByWeekData.getSucess().equals("true")) {
@@ -327,9 +340,9 @@ public class MainActivity extends AppCompatActivity {
                         barChar.invalidate();
                     }
                 });
-                Log.i("MainActivity", "UserActivityByWeek-onPostExecute");
+                Log.i("MainActivity", "TeamActivityByWeek-onPostExecute");
             } else {
-                Log.i("MainActivity", "UserActivityByWeek-onPostExecute-Error");
+                Log.i("MainActivity", "TeamActivityByWeek-onPostExecute-Error");
             }
         }
 
@@ -389,7 +402,7 @@ public class MainActivity extends AppCompatActivity {
                 ((EditText)findViewById(R.id.minuteseditText)).setText("");
                 onFetchData();
             } else {
-                Toast.makeText(MainActivity.this,  "Failed to update activity", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Failed to update activity", Toast.LENGTH_LONG).show();
             }
         }
 
@@ -555,11 +568,31 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+            ((Button) findViewById(R.id.updatebutton)).setClickable(false);
             updateUserActivity(minutesReport);
         }
     }
 
     public void smilyClicked(View v) {
         Log.i("MainActivity", "smilyClicked");
+        String minutesReport = "10";
+
+        // we don't report more then (userCommit-userSum)
+        if (((userCommit-userSum) < Integer.parseInt("10")) && (userCommit > 0)) {
+            minutesReport = String.valueOf(userCommit-userSum);
+        }
+
+        updateUserActivity(minutesReport);
+
+        if (((ImageButton)findViewById(R.id.imageButton)) != null) {
+            ((ImageButton) findViewById(R.id.imageButton)).setVisibility(View.INVISIBLE);
+            Calendar calendar = Calendar.getInstance();
+            Integer day = calendar.get(Calendar.DAY_OF_MONTH);
+
+            SharedPreferences preferences = getApplicationContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("onedayreport", day);
+            editor.commit();
+        }
     }
 }
